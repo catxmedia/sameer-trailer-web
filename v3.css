@@ -1,0 +1,373 @@
+/* ==========================================================================
+   SAMEER TRAILER MOTOR BODY PVT. LTD. - VERSION 3 CYBER INDUSTRIAL DARK
+   Palette: Carbon Dark (#0B0C10) | Metallic Titanium (#1F2833) | Neon Safety Orange (#FF5500)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --v3-black: #0B0C10;
+  --v3-card: rgba(31, 40, 51, 0.7);
+  --v3-card-border: rgba(255, 255, 255, 0.1);
+  --v3-orange: #FF5500;
+  --v3-orange-glow: rgba(255, 85, 0, 0.4);
+  --v3-text: #FFFFFF;
+  --v3-text-muted: #C5C6C7;
+  --v3-font: 'Outfit', sans-serif;
+  --v3-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --v3-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--v3-font);
+  background-color: var(--v3-black);
+  color: var(--v3-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; transition: var(--v3-transition); }
+
+/* --- TOP ANNOUNCEMENT STRIP --- */
+.top-bar-v3 {
+  background: #050608;
+  color: var(--v3-text-muted);
+  padding: 8px 24px;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--v3-orange);
+}
+
+.top-bar-v3 a { color: var(--v3-orange); font-weight: 700; }
+
+/* --- NAVBAR V3 --- */
+.nav-v3 {
+  background: rgba(11, 12, 16, 0.85);
+  backdrop-filter: blur(16px);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--v3-card-border);
+}
+
+.brand-v3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge-v3 {
+  background: linear-gradient(135deg, #FF5500, #E04A00);
+  color: white;
+  font-weight: 900;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  box-shadow: 0 0 16px var(--v3-orange-glow);
+}
+
+.title-v3 {
+  font-weight: 900;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.sub-v3 {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--v3-orange);
+  letter-spacing: 1px;
+  display: block;
+}
+
+.menu-v3 {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  align-items: center;
+}
+
+.link-v3 {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--v3-text-muted);
+}
+
+.link-v3:hover, .link-v3.active {
+  color: var(--v3-orange);
+  text-shadow: 0 0 8px var(--v3-orange-glow);
+}
+
+.cta-v3 {
+  background: linear-gradient(135deg, #FF5500, #C44100);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 0 0 20px var(--v3-orange-glow);
+}
+
+.cta-v3:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(255, 85, 0, 0.7);
+}
+
+/* --- HERO V3 --- */
+.hero-v3 {
+  position: relative;
+  width: 100%;
+  height: 88vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-v3-video {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;
+}
+
+.hero-v3-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at center, rgba(11, 12, 16, 0.4) 0%, rgba(11, 12, 16, 0.9) 100%);
+  z-index: 2;
+}
+
+.hero-v3-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.v3-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 85, 0, 0.2);
+  border: 1px solid var(--v3-orange);
+  color: var(--v3-orange);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.v3-hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.v3-hero-title span {
+  color: var(--v3-orange);
+  text-shadow: 0 0 20px var(--v3-orange-glow);
+}
+
+.v3-hero-sub {
+  font-size: 1.25rem;
+  max-width: 700px;
+  color: var(--v3-text-muted);
+  margin-bottom: 36px;
+}
+
+.v3-btn-group { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.v3-btn-main {
+  background: linear-gradient(135deg, #FF5500, #D04000);
+  color: white;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 24px var(--v3-orange-glow);
+}
+
+.v3-btn-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 36px rgba(255, 85, 0, 0.8);
+}
+
+.v3-btn-outline {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.v3-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--v3-orange);
+}
+
+/* --- INTERACTIVE PAYLOAD CONFIGURATOR --- */
+.configurator-section {
+  padding: 80px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.config-box {
+  background: var(--v3-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--v3-card-border);
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: var(--v3-shadow);
+}
+
+.config-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.config-title span { color: var(--v3-orange); }
+
+.config-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.config-control label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--v3-orange);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.config-control select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #11141B;
+  color: white;
+  font-family: var(--v3-font);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.config-results-card {
+  background: linear-gradient(135deg, rgba(255, 85, 0, 0.15), rgba(11, 12, 16, 0.8));
+  border: 1px solid var(--v3-orange);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.result-value {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--v3-orange);
+  line-height: 1;
+  text-shadow: 0 0 16px var(--v3-orange-glow);
+}
+
+.result-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--v3-text-muted);
+  margin-top: 6px;
+}
+
+/* --- FLOATING VERSION SWITCHER BAR (BOTTOM) --- */
+.version-switcher-bar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(11, 12, 16, 0.92);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--v3-orange);
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 99999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px var(--v3-orange-glow);
+}
+
+.switcher-label {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: var(--v3-orange);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 4px;
+}
+
+.switcher-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: var(--v3-transition);
+}
+
+.switcher-btn:hover, .switcher-btn.active {
+  background: var(--v3-orange);
+  color: white;
+  border-color: var(--v3-orange);
+  box-shadow: 0 0 12px var(--v3-orange-glow);
+}
+
+/* Footer V3 */
+footer {
+  background: #050608;
+  padding: 64px 32px 100px;
+  border-top: 4px solid var(--v3-orange);
+}
+
+@media (max-width: 768px) {
+  .menu-v3 { display: none; }
+  .v3-hero-title { font-size: 2.5rem; }
+  .version-switcher-bar { width: 92%; padding: 8px 12px; gap: 6px; }
+  .switcher-btn { padding: 6px 12px; font-size: 0.75rem; }
+}
