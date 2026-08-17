@@ -1,18 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SAMEER TRAILER MOTOR BODY PVT. LTD. | Volvo Style Heavy Commercial Platform</title>
-    <meta name="description" content="Official website of Sameer Trailer Motor Body Pvt. Ltd. Bhilwara, Rajasthan. 35+ years of heavy commercial vehicle body engineering, trailers, tippers, bulkers & tankers." />
-    <!-- Google Fonts: Outfit & Inter -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sameer Trailer | Heavy Commercial Vehicles Bhilwara</title>
+    <meta name="description" content="Official website of Sameer Trailer Motor Body Pvt. Ltd. Bhilwara, Rajasthan. 35+ years of heavy commercial vehicle body engineering, trailers, tippers, bulkers & tankers.">
+    
+    <!-- Volvo Fonts & CSS References -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+      :root {
+        --vcdk-color-bg: #0B0D11;
+        --vcdk-color-surface: #13161F;
+        --vcdk-color-card: #13161F;
+        --vcdk-color-brand-orange: #FF5500;
+        --vcdk-color-text-white: #FFFFFF;
+        --vcdk-color-text-primary: #F3F4F6;
+        --vcdk-color-text-secondary: #D1D5DB;
+        --vcdk-color-border: #1E2330;
+      }
+      
+      body {
+        background-color: var(--vcdk-color-bg);
+        color: var(--vcdk-color-text-primary);
+        font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .volvo-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      .volvo-top-utility {
+        background: #07080B;
+        color: #8892B0;
+        font-size: 0.8rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px solid var(--vcdk-color-border);
+      }
+
+      .utility-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .volvo-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(11, 13, 17, 0.94);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--vcdk-color-border);
+        padding: 1rem 0;
+      }
+
+      .header-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .volvo-logo-badge {
+        background: var(--vcdk-color-brand-orange);
+        color: #FFF;
+        font-weight: 900;
+        font-size: 1.4rem;
+        padding: 0.25rem 0.65rem;
+        border-radius: 6px;
+      }
+
+      .volvo-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 1.8rem;
+        font-weight: 800;
+        font-size: 0.95rem;
+        border-radius: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.2s ease;
+      }
+
+      .btn-orange {
+        background: var(--vcdk-color-brand-orange);
+        color: #FFF;
+      }
+
+      .btn-whatsapp {
+        background: #25D366;
+        color: #FFF;
+      }
+
+      .volvo-hero {
+        padding: 6.5rem 0 5rem;
+        background: radial-gradient(circle at 75% 25%, rgba(255, 85, 0, 0.12) 0%, transparent 65%);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 3.5rem;
+        align-items: center;
+      }
+
+      .hero-title {
+        font-size: 3.8rem;
+        font-weight: 900;
+        line-height: 1.1;
+        color: #FFF;
+        text-transform: uppercase;
+      }
+
+      .hero-title span {
+        color: var(--vcdk-color-brand-orange);
+      }
+
+      .volvo-stats {
+        background: var(--vcdk-color-surface);
+        border-y: 1px solid var(--vcdk-color-border);
+        padding: 3.5rem 0;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .stat-card {
+        background: var(--vcdk-color-card);
+        border: 1px solid var(--vcdk-color-border);
+        border-radius: 16px;
+        padding: 1.75rem 1.5rem;
+        text-align: center;
+      }
+
+      .stat-num {
+        font-size: 2.9rem;
+        font-weight: 900;
+        color: var(--vcdk-color-brand-orange);
+      }
+
+      .volvo-products {
+        padding: 6.5rem 0;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2.25rem;
+      }
+
+      .product-card {
+        background: var(--vcdk-color-card);
+        border: 1px solid var(--vcdk-color-border);
+        border-radius: 18px;
+        overflow: hidden;
+      }
+
+      .product-img {
+        width: 100%;
+        height: 235px;
+        object-fit: cover;
+      }
+
+      .product-body {
+        padding: 1.65rem;
+      }
+
+      .volvo-footer {
+        background: #07080B;
+        border-top: 1px solid var(--vcdk-color-border);
+        padding: 5rem 0 2.5rem;
+      }
+    </style>
+</head>
+<body>
+
+    <!-- Volvo Top Utility -->
+    <div class="volvo-top-utility">
+      <div class="volvo-container utility-flex">
+        <span>📍 BHILWARA, RAJASTHAN | EST. 1991 (35+ YEARS)</span>
+        <span>📞 SALES DESK: +91 9928278071 | ✉️ sameertrailersales@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- Volvo Header -->
+    <header class="volvo-header">
+      <div class="volvo-container header-flex">
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <div class="volvo-logo-badge">ST</div>
+          <div>
+            <div style="font-weight: 900; font-size: 1.35rem; color: #FFF; line-height: 1;">SAMEER TRAILER</div>
+            <div style="font-size: 0.68rem; color: var(--vcdk-color-brand-orange); font-weight: 700; letter-spacing: 1px;">MOTOR BODY PVT. LTD.</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 2rem; list-style: none;">
+          <a href="#vehicles" style="color: #D1D5DB; text-decoration: none; font-weight: 700; text-transform: uppercase;">Vehicles</a>
+          <a href="#engineering" style="color: #D1D5DB; text-decoration: none; font-weight: 700; text-transform: uppercase;">Engineering</a>
+          <a href="#plants" style="color: #D1D5DB; text-decoration: none; font-weight: 700; text-transform: uppercase;">Plants</a>
+          <a href="#contact" style="color: #D1D5DB; text-decoration: none; font-weight: 700; text-transform: uppercase;">Contact</a>
+        </div>
+
+        <div>
+          <a href="https://wa.me/919928278071?text=Hello%20Sameer%20Trailer" target="_blank" class="volvo-btn btn-orange">⚡ Request Quote</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Volvo Hero Section -->
+    <section class="volvo-hero">
+      <div class="volvo-container hero-grid">
+        <div>
+          <div style="color: var(--vcdk-color-brand-orange); font-weight: 800; letter-spacing: 1px; margin-bottom: 1.5rem; text-transform: uppercase;">🇮🇳 AAPKI TARAKKI KA HUMSAFAR</div>
+          <h1 class="hero-title">HEAVY COMMERCIAL <span>TRAILERS & TIPPERS</span></h1>
+          <p style="font-size: 1.25rem; color: #D1D5DB; margin-top: 1.25rem; margin-bottom: 2.25rem;">Engineered with SAIL & Jindal HSFQ-450 High-Tensile Steel for maximum payload capacity and uncompromised durability.</p>
+          <div style="display: flex; gap: 1.25rem;">
+            <a href="https://wa.me/919928278071?text=Hello%20Sameer%20Trailer" target="_blank" class="volvo-btn btn-whatsapp">💬 WhatsApp Direct Quote</a>
+          </div>
+        </div>
+        <div>
+          <div style="background: var(--vcdk-color-card); border: 1px solid var(--vcdk-color-border); border-radius: 22px; padding: 1.25rem;">
+            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80" alt="Sameer Trailer" style="width: 100%; border-radius: 16px;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volvo Stats Section -->
+    <section class="volvo-stats">
+      <div class="volvo-container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num">1991</div>
+            <div style="font-weight: 800; text-transform: uppercase; margin-top: 0.4rem;">Est. Year (35+ Yrs)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">1,500+</div>
+            <div style="font-weight: 800; text-transform: uppercase; margin-top: 0.4rem;">Happy Clients</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">150+</div>
+            <div style="font-weight: 800; text-transform: uppercase; margin-top: 0.4rem;">Full-Time Specialists</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">35+</div>
+            <div style="font-weight: 800; text-transform: uppercase; margin-top: 0.4rem;">Body Variants</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">2</div>
+            <div style="font-weight: 800; text-transform: uppercase; margin-top: 0.4rem;">Bhilwara Plants</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volvo Vehicles Section -->
+    <section id="vehicles" class="volvo-products">
+      <div class="volvo-container">
+        <div style="text-align: center; margin-bottom: 3.5rem;">
+          <h2 style="font-size: 3rem; font-weight: 900; color: #FFF; text-transform: uppercase;">ENGINEERED <span style="color: var(--vcdk-color-brand-orange);">VEHICLE LINEUP</span></h2>
+          <p style="color: #D1D5DB; margin-top: 0.5rem;">Explore our comprehensive range of commercial trailers, tippers, bulkers & tankers.</p>
+        </div>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Side Wall Trailer">
+            <div class="product-body">
+              <h3 style="font-size: 1.4rem; font-weight: 900; color: #FFF; text-transform: uppercase;">Side Wall Trailer</h3>
+              <div style="color: var(--vcdk-color-brand-orange); font-weight: 700; margin-bottom: 1rem;">3-Axle / 40ft - 45ft</div>
+              <p style="color: #D1D5DB; font-size: 0.92rem; margin-bottom: 1.5rem;">Fabricated with SAIL HSFQ-450 high-tensile main girders. Saves 1,000 kg tare weight for +1.0 Ton legal extra payload.</p>
+              <a href="https://wa.me/919928278071?text=Quote%20request%20for%20Side%20Wall%20Trailer" target="_blank" class="volvo-btn btn-whatsapp" style="width: 100%; justify-content: center;">💬 Request Quote</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1586191582056-a67b2d561e1b?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Mining Tip Trailer">
+            <div class="product-body">
+              <h3 style="font-size: 1.4rem; font-weight: 900; color: #FFF; text-transform: uppercase;">Mining Tip Trailer</h3>
+              <div style="color: var(--vcdk-color-brand-orange); font-weight: 700; margin-bottom: 1rem;">20-40 Cu.M U-Shape</div>
+              <p style="color: #D1D5DB; font-size: 0.92rem; margin-bottom: 1.5rem;">Heavy rock body built with 170-Bar telescopic hydraulic tipping kit and 18T York forged axles for extreme quarry mining.</p>
+              <a href="https://wa.me/919928278071?text=Quote%20request%20for%20Mining%20Tip%20Trailer" target="_blank" class="volvo-btn btn-whatsapp" style="width: 100%; justify-content: center;">💬 Request Quote</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=800&q=80" class="product-img" alt="Pneumatic Cement Bulker">
+            <div class="product-body">
+              <h3 style="font-size: 1.4rem; font-weight: 900; color: #FFF; text-transform: uppercase;">Pneumatic Bulker</h3>
+              <div style="color: var(--vcdk-color-brand-orange); font-weight: 700; margin-bottom: 1rem;">30-40 Cu.M Capacity</div>
+              <p style="color: #D1D5DB; font-size: 0.92rem; margin-bottom: 1.5rem;">High-pressure pneumatic discharge bulker for dry cement and flyash, engineered to 1.8 BAR working pressure.</p>
+              <a href="https://wa.me/919928278071?text=Quote%20request%20for%20Pneumatic%20Bulker" target="_blank" class="volvo-btn btn-whatsapp" style="width: 100%; justify-content: center;">💬 Request Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volvo Footer -->
+    <footer id="contact" class="volvo-footer">
+      <div class="volvo-container">
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3.5rem;">
+          <div>
+            <h4 style="color: #FFF; font-weight: 800; font-size: 1.15rem; margin-bottom: 1.25rem;">SAMEER TRAILER MOTOR BODY PVT. LTD.</h4>
+            <p style="color: #D1D5DB;">India's leading heavy commercial vehicle body manufacturer with 35+ years of engineering excellence and 2 state-of-the-art plants in Bhilwara, Rajasthan.</p>
+          </div>
+          <div>
+            <h4 style="color: #FFF; font-weight: 800; font-size: 1.15rem; margin-bottom: 1.25rem;">Quick Links</h4>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="#vehicles" style="color: #D1D5DB; text-decoration: none;">Vehicles</a>
+              <a href="#engineering" style="color: #D1D5DB; text-decoration: none;">Engineering</a>
+              <a href="#plants" style="color: #D1D5DB; text-decoration: none;">Plants</a>
+            </div>
+          </div>
+          <div>
+            <h4 style="color: #FFF; font-weight: 800; font-size: 1.15rem; margin-bottom: 1.25rem;">Bhilwara Plants</h4>
+            <div style="color: #D1D5DB; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div>Unit-1: Near FCI Godown, Ambedkar Nagar</div>
+              <div>Unit-2: NH 48, Takhatpura, Mandalgarh</div>
+            </div>
+          </div>
+          <div>
+            <h4 style="color: #FFF; font-weight: 800; font-size: 1.15rem; margin-bottom: 1.25rem;">Direct Hotlines</h4>
+            <p style="color: #D1D5DB; margin-bottom: 0.5rem;">📞 +91 9928278071</p>
+            <p style="color: #D1D5DB; margin-bottom: 1rem;">✉️ sameertrailersales@gmail.com</p>
+            <a href="https://wa.me/919928278071?text=Hello%20Sameer%20Trailer" target="_blank" class="volvo-btn btn-whatsapp">💬 WhatsApp Sales</a>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid var(--vcdk-color-border); padding-top: 2rem; display: flex; justify-content: space-between; color: #8892B0; font-size: 0.88rem;">
+          <span>© 2026 SAMEER TRAILER MOTOR BODY PVT. LTD. All rights reserved.</span>
+          <span>Official Domain: www.sameertrailer.com</span>
+        </div>
+      </div>
+    </footer>
+
+</body>
 </html>
