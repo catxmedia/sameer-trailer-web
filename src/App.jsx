@@ -11,6 +11,7 @@ import ContactUnits from './components/ContactUnits';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 import RfqBuilder from './components/RfqBuilder';
+import AiAdvisor from './components/AiAdvisor';
 
 export default function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -48,6 +49,7 @@ export default function App() {
 
       <Footer onOpenRfq={() => handleOpenRfq()} />
       <FloatingActions onOpenRfq={() => handleOpenRfq()} />
+      <AiAdvisor onOpenRfq={() => handleOpenRfq()} />
 
       {/* Specification Viewer Modal */}
       {selectedProduct && (
