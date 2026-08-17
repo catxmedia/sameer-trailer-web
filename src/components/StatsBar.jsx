@@ -7,10 +7,12 @@ export default function StatsBar() {
       <div className="container">
         <div className="stats-grid">
           {companyProfile.keyStats.map((stat, index) => (
-            <div key={index} className="stat-item">
-              <div className="stat-number">{stat.value}</div>
-              <div className="stat-label">{stat.label}</div>
-              <div className="stat-desc">{stat.desc}</div>
+            <div key={index} className="stat-item-brochure">
+              <div className="stat-val-header">{stat.value}</div>
+              <div className="stat-body">
+                <div className="stat-label">{stat.label}</div>
+                <div className="stat-desc">{stat.desc}</div>
+              </div>
             </div>
           ))}
         </div>
