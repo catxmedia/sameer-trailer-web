@@ -3554,3 +3554,91 @@
 	display:block;
 }
 
+
+/* ==========================================================================
+   SAMEER TRAILER MOTOR BODY PVT. LTD. - BROCHURE DESIGN SYSTEM OVERRIDES
+   Colors: Safety Orange (#FF5500) | High-Contrast Black (#111111) | Warm Beige (#FAF9F6)
+   ========================================================================== */
+
+:root, body, html, .vcdk-theme-volvo, .vcdk-mode-dark {
+    --vcdk-color-bg: #FAF9F6 !important;
+    --vcdk-color-bg-base: #F5F4F0 !important;
+    --vcdk-color-bg-button-primary: #FF5500 !important;
+    --vcdk-color-bg-button-primary-hover: #E04A00 !important;
+    --vcdk-color-bg-button-primary-pressed: #C44100 !important;
+    --vcdk-color-bg-button-marketing: #FF5500 !important;
+    --vcdk-color-bg-button-marketing-hover: #E04A00 !important;
+    --vcdk-color-bg-highlight: #FF5500 !important;
+    --vcdk-color-text: #111111 !important;
+    --vcdk-color-text-highlight: #FF5500 !important;
+    --vcdk-color-text-link: #FF5500 !important;
+    --vcdk-color-text-link-hover: #E04A00 !important;
+    --vcdk-color-border-focus: #FF5500 !important;
+    --vcdk-color-icon-highlight: #FF5500 !important;
+}
+
+body {
+    background-color: #FAF9F6 !important;
+    color: #111111 !important;
+}
+
+/* Header Navbar Theme */
+.header, .header__brand, .header__mainnav, .cmp-navigation {
+    background-color: #FFFFFF !important;
+    border-bottom: 2px solid #FF5500 !important;
+}
+
+.header__company {
+    color: #111111 !important;
+    font-weight: 900 !important;
+}
+
+.header__market {
+    color: #FF5500 !important;
+    font-weight: 700 !important;
+}
+
+/* Navigation Links */
+.cmp-navigation__item-link-text, .cmp-list__item-text {
+    color: #111111 !important;
+    font-weight: 600 !important;
+}
+
+.cmp-navigation__item-link:hover .cmp-navigation__item-link-text {
+    color: #FF5500 !important;
+}
+
+/* Cards & Section Container Overrides */
+.teaser, .cmp-teaser, .card, .vcdk-theme-provider {
+    background-color: #FFFFFF !important;
+    border-radius: 8px !important;
+}
+
+.cmp-teaser__title, .cmp-teaser__title-link {
+    color: #111111 !important;
+    font-weight: 800 !important;
+}
+
+.cmp-teaser__description {
+    color: #333333 !important;
+}
+
+/* Safety Orange Primary Action Buttons */
+vcdk-button[variant="primary"], .vcdk-button--primary, button.primary, .cmp-button--primary {
+    background-color: #FF5500 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-weight: 700 !important;
+}
+
+/* Footer Styling */
+footer, .footer {
+    background-color: #111111 !important;
+    color: #FAF9F6 !important;
+    border-top: 3px solid #FF5500 !important;
+}
+
+footer a, .footer a {
+    color: #FF5500 !important;
+}
